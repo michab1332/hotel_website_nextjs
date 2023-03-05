@@ -1,13 +1,10 @@
 import '@/styles/globals.css'
 import type { AppProps } from 'next/app'
 
-import Navbar from '@/shared-components/Navbar';
+import Layout from '@/shared-components/Layout';
 
 export default function App({ Component, pageProps }: AppProps) {
-  return (
-    <>
-      <Navbar />
-      <Component {...pageProps} />
-    </>
-  );
+  return (<Layout>
+    <Component {...pageProps} />
+  </Layout>);
 }
