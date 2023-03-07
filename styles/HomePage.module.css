@@ -1,6 +1,6 @@
 .container {
     width: 100%;
-    height: calc(100vh - 4rem);
+    height: 100vh;
     position: relative;
 }
 
