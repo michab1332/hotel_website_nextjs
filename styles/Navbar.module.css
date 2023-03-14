@@ -18,8 +18,18 @@
     justify-content: space-between;
 }
 
+.logo {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
 .logoTitle {
     font-size: 1.5rem;
+}
+
+.picture {
+    filter: invert(1);
 }
 
 .nav {
