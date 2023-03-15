@@ -36,3 +36,52 @@
     display: flex;
     gap: 1.4rem;
 }
+
+.burgerButtonWrapper {
+    display: none;
+}
+
+@media (max-width: 825px) {
+    .burgerButtonWrapper {
+        height: 100%;
+        position: relative;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    .burgerButton {
+        width: 44px;
+        height: .2rem;
+        background-color: #fff;
+        border-radius: 1rem;
+    }
+
+    .burgerButton::after {
+        content: "";
+        width: 44px;
+        height: .2rem;
+        background-color: #fff;
+        border-radius: 1rem;
+        position: absolute;
+        top: 1.3rem;
+        left: 0;
+    }
+
+    .burgerButton::before {
+        content: "";
+        width: 44px;
+        height: .2rem;
+        background-color: #fff;
+        border-radius: 1rem;
+        position: absolute;
+        bottom: 1.3rem;
+        left: 0;
+    }
+
+    .nav {
+        display: none;
+    }
+}

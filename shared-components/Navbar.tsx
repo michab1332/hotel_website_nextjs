@@ -21,6 +21,9 @@ const Navbar = () => {
                     <Link href="/platnosci">Płatności</Link>
                     <Link href="/kontakt">Kontakt</Link>
                 </nav>
+                <div className={styles.burgerButtonWrapper}>
+                    <div className={styles.burgerButton}></div>
+                </div>
             </div>
         </div>
     );
