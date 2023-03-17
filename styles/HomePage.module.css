@@ -131,4 +131,14 @@
 
 .aboutSectionLink {
     font-weight: bold;
+    text-align: center;
+}
+
+.gallerySectionContainer {
+    position: relative;
+    height: 436px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
