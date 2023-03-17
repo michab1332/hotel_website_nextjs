@@ -8,9 +8,7 @@ import Logo from "../../public/hotel_logo.png";
 const HomePage = () => {
     return (
         <div className={styles.container}>
-            <picture className={styles.picture}>
-                <Image width="400" src={HeroImage} alt="hotel" />
-            </picture>
+            <Image className={styles.backgroundImage} fill src={HeroImage} alt="hotel" />
             <div className={styles.wrapper}>
                 <div className={styles.heroLogo}>
                     <picture className={styles.pictureLogo}>
