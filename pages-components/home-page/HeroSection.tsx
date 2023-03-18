@@ -16,7 +16,7 @@ const HomePage = () => {
                     </picture>
                     <p className={styles.textLogo + " " + playfairDisplay.className}>Willa Radwan</p>
                 </div>
-                <h1 className={styles.heroText}>Hotel i restauracja z historią</h1>
+                <h1 className={styles.heroText + " " + playfairDisplay.className}>Hotel i restauracja z historią</h1>
                 <p className={styles.heroDescription + " " + playfairDisplay.className}>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s.</p>
                 <div className={styles.infoCard + " " + poppins.className}>
                     <div className={styles.infoCardWrapper}>
