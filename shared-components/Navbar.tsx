@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react';
 import styles from '@/styles/Navbar.module.css';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -5,8 +6,24 @@ import { poppins, playfairDisplay } from "@/utils/fonts";
 import Logo from "../public/hotel_logo.png";
 
 const Navbar = () => {
+    const [active, setActive] = useState(false);
+
+    function setActiveNavbar() {
+        const scrollY: number = window.scrollY;
+        if (scrollY === 0) {
+            setActive(false);
+            return;
+        }
+        setActive(true);
+    }
+
+    useEffect(() => {
+        window.addEventListener("scroll", setActiveNavbar);
+        return () => window.removeEventListener("scroll", setActiveNavbar);
+    }, []);
+
     return (
-        <div className={styles.container}>
+        <div className={active ? (styles.container + " " + styles.active) : styles.container}>
             <div className={styles.wrapper}>
                 <div className={styles.logo}>
                     <picture className={styles.picture}>
@@ -25,7 +42,7 @@ const Navbar = () => {
                     <div className={styles.burgerButton}></div>
                 </div>
             </div>
-        </div>
+        </div >
     );
 }
 

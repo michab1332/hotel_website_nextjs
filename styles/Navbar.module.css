@@ -7,6 +7,7 @@
     z-index: 999;
     color: #fff;
     padding: 0 1rem;
+    transition: background-color .3s ease;
 }
 
 .wrapper {
@@ -39,6 +40,11 @@
 
 .burgerButtonWrapper {
     display: none;
+}
+
+.active {
+    color: #000;
+    background-color: var(--background-light-color);
 }
 
 @media (max-width: 825px) {
