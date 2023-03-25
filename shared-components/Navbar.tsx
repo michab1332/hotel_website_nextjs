@@ -28,8 +28,8 @@ const Navbar = () => {
     }, []);
 
     return (
-        <div className={active ? (styles.container + " " + styles.active) : styles.container}>
-            <div className={styles.wrapper}>
+        <div className={active ? (styles.container + " " + styles.activeContainer) : styles.container}>
+            <div className={active ? (styles.wrapper + " " + styles.activeWrapper) : styles.wrapper}>
                 <div className={styles.logo}>
                     <picture className={styles.picture}>
                         <Image src={Logo} alt="Hotel Logo" width={50} />
@@ -47,7 +47,7 @@ const Navbar = () => {
                     <div className={styles.burgerButton}></div>
                 </div>
             </div>
-            <div className={styles.mobileMenu}>
+            <div onClick={handleBurgerButtonOnClick} className={isMenuActive ? styles.mobileMenu + " " + poppins.className : styles.mobileMenuHidden}>
                 <Link href="/">O nas</Link>
                 <Link href="/uslugi">Usługi</Link>
                 <Link href="/galeria">Galeria</Link>
