@@ -7,6 +7,7 @@ import Logo from "../public/hotel_logo.png";
 
 const Navbar = () => {
     const [active, setActive] = useState(false);
+    const [isMenuActive, setIsMenuActive] = useState(false);
 
     function setActiveNavbar() {
         const scrollY: number = window.scrollY;
@@ -15,6 +16,10 @@ const Navbar = () => {
             return;
         }
         setActive(true);
+    }
+
+    function handleBurgerButtonOnClick() {
+        setIsMenuActive(prevState => !prevState);
     }
 
     useEffect(() => {
@@ -38,9 +43,16 @@ const Navbar = () => {
                     <Link href="/platnosci">Płatności</Link>
                     <Link href="/kontakt">Kontakt</Link>
                 </nav>
-                <div className={styles.burgerButtonWrapper}>
+                <div onClick={handleBurgerButtonOnClick} className={styles.burgerButtonWrapper}>
                     <div className={styles.burgerButton}></div>
                 </div>
+            </div>
+            <div className={styles.mobileMenu}>
+                <Link href="/">O nas</Link>
+                <Link href="/uslugi">Usługi</Link>
+                <Link href="/galeria">Galeria</Link>
+                <Link href="/platnosci">Płatności</Link>
+                <Link href="/kontakt">Kontakt</Link>
             </div>
         </div >
     );

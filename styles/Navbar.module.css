@@ -90,4 +90,14 @@
     .nav {
         display: none;
     }
+
+    .mobileMenu {
+        width: 100vw;
+        height: calc(100vh - 4.5rem);
+        position: absolute;
+        top: 4.5rem;
+        left: 0;
+        z-index: 3;
+        background-color: #000;
+    }
 }
