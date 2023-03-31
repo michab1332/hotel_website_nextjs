@@ -4,12 +4,14 @@ import { playfairDisplay } from "@/utils/fonts";
 
 interface LinkButton {
     url: string,
-    text: string
+    text: string,
+    black?: boolean
 }
 
-export default function LinkButton({ url, text }: LinkButton) {
+export default function LinkButton({ url, text, black = false }: LinkButton) {
+    const isBlack = black ? styles.linkButtonBlack : styles.linkButton;
     return (
-        <div className={styles.linkButton + " " + playfairDisplay.className}>
+        <div className={isBlack + " " + playfairDisplay.className}>
             <Link href={url}>{text}</Link>
         </div>
     )
