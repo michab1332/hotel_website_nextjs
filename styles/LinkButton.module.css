@@ -11,12 +11,27 @@
     transition: transform .3s ease;
 }
 
-.linkButton>a {
+.linkButtonBlack {
+    width: 13rem;
+    height: 4rem;
+    background-color: transparent;
+    position: relative;
+    display: flex;
+    font-weight: bold;
+    color: #000;
+    border: solid 5px #000;
+    text-align: center;
+    transition: transform .3s ease;
+}
+
+.linkButton>a,
+.linkButtonBlack>a {
     width: 100%;
     height: 100%;
     line-height: 3.5rem;
 }
 
-.linkButton:hover {
+.linkButton:hover,
+.linkButtonBlack:hover {
     transform: scale(1.1);
 }
