@@ -7,7 +7,7 @@ import HotelRoomImage from "@/public/hotel_room.jpg";
 export default function GallerySection() {
     return (
         <div className={styles.gallerySectionContainer}>
-            <Image className={styles.backgroundImage} fill src={HotelRoomImage} alt="background photo of hotel room" />
+            <Image className={styles.backgroundImage + " " + styles.animateImage} fill src={HotelRoomImage} alt="background photo of hotel room" />
             <LinkButton url="/galeria" text="Zobacz naszą galerie" />
         </div>
     );

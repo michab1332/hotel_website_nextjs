@@ -23,6 +23,7 @@
 .backgroundImage {
     filter: brightness(0.4);
     object-fit: cover;
+    overflow: hidden;
 }
 
 .picture>img {
@@ -119,6 +120,15 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
+}
+
+.animateImage {
+    transition: transform .5s ease-in-out;
+}
+
+.animateImage:hover {
+    transform: scale(1.1);
 }
 
 .servicesContainer {
@@ -139,6 +149,7 @@
     padding: 2rem;
     justify-content: center;
     gap: 2rem;
+    overflow: hidden;
 }
 
 .serviceTitle {
