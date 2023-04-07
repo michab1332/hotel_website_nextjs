@@ -1,6 +1,5 @@
 .container {
     width: 100%;
-    height: 100vh;
     background-color: var(--background-light-color);
     display: flex;
     justify-content: center;
@@ -17,7 +16,6 @@
 }
 
 .wrapper__reverse {
-    height: 100%;
     width: var(--max-width);
     display: flex;
     justify-content: center;
@@ -48,9 +46,14 @@
     font-size: var(--title-font-size);
 }
 
+@media (min-width: 625px) {
+    .container {
+        height: 90vh;
+    }
+}
+
 @media (max-width: 625px) {
     .container {
-        height: 80vh;
         align-items: baseline;
     }
 
@@ -58,6 +61,7 @@
     .wrapper__reverse {
         flex-direction: column;
         padding: 1rem 1rem;
+        gap: 0;
     }
 
     .textWrapper {
@@ -67,6 +71,7 @@
 
     .picture {
         flex: none;
+        height: 264px;
     }
 
 }
